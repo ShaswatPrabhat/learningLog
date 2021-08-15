@@ -28,6 +28,16 @@ So A Disjoint set will have 3 operations:
 
  This means the Find operartion becomes O(n) linear operation.
 
- Union operation becomes a bit more tricky as we want to find the root of each subtree recursively till we reach the topmost parent.
+ Union operation becomes a bit more tricky, on each union operation between (Vertex X and Vertex Y) we choose say Vertex X as the root and update the root of Vertex Y to be X.
 
- 
+ Then we traverse the array too change all the Vertices which have their parent as Y to X.
+
+ This makes it super simple to Find Connectedness of a Vertex X and Vertex Y as their root element will be the same.
+
+ But the Union opertation means traversing the entire array and replacing vertexes wherever needed.
+
+ So Union becomes a O(n) everytime as we traverse the entire array.
+
+ Find is O(1) constant time.
+
+ Connectedness is also O(1) constant time as we need to just check the set entry.
