@@ -19,3 +19,15 @@ So A Disjoint set will have 3 operations:
 * Union operation which we will do for each Edge we encounter and then change the disjointed-ness for the vertices.
 
 * So the initialization is ran for n Vertices and then Union for each Edge so atleast n-1 times.
+
+### For Connectedness Disjoint Sets can be implemented in a few ways
+
+#### Quick Find
+
+ In Quick find we update the value of each Vertex to be the absolute Root of the subtree found till that point.
+
+ This means the Find operartion becomes O(n) linear operation.
+
+ Union operation becomes a bit more tricky as we want to find the root of each subtree recursively till we reach the topmost parent.
+
+ 
