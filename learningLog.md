@@ -56,4 +56,16 @@ So A Disjoint set will have 3 operations:
 
  So by traversing the array we reach the top most root.
 
- 
+ All the steps take O(N) time here but in the worst case. In most cases it is less than O(N).
+
+### Union By rank
+
+Optimized version of Quick Union.
+
+The complexity of find for Quick Union is O(h) which is the height of the tree we generate.
+
+So if we can balance the height of the tree slightly then our complexity for find will get better.
+
+Here we make a slight modificaion in our logic. When we do a Union of Vertex X and Vertex Y we make the parent as Vertex with higher rank or height.
+
+This is a greedy implementation which ensure a well spread out tree rather than a linear structure of randomly picking up the parent node
